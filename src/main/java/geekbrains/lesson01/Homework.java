@@ -1,58 +1,47 @@
 package geekbrains.lesson01;
 
-public class Homework {
-    public static void main(String[] args){
-        // обьявляем и сразу присваиваем
-        byte byteVal=30;
-        short shortVal=15867;
-        float floatVal=15.85f;
-        char charVal='F';
-        char charVal2=52;
-        char charVal3='\u2242';
-        // объявляем, а потом присваеваем
-        int intVal;
-        intVal=14564561;
-        long longVal;
-        longVal = 14564561234L;
-        double doubleVal;
-        doubleVal=56.15614561;
-        boolean booleanVar;
-        booleanVar=5+8<=13;
+import java.util.Random;
 
+public class Homework {
+    public static void main(String[] args) {
+        int[] arr = new int[]{0, 1, 1, 0, 1, 0, 1};
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == 0)
+                arr[i] = 1;
+            else
+                arr[i] = 0;
+        }
+
+        int[] arr2 = new int[8];
+        for (int i = 0; i < arr2.length; i++) {
+            arr2[i] = 3 * i;
+        }
+
+        int[] arr3 = new int[]{1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
+        for (int i = 0; i < arr3.length; i++) {
+            if (arr3[i] < 6)
+                arr3[i] *= 2;
+        }
+
+        int[][] arr4 = new int[5][5];
+        // поскольку мы имеем дело с диагональными элементами, можно обойтись одним циклом
+        for (int i = 0; i < arr4.length; i++) {
+            arr4[i][i] = 1;
+        }
+
+        int[] arr5 = new int[10];
+        Random r = new Random(); // чтобы заполнить массив случайными числами
+        for (int i = 0; i < arr5.length; i++) {
+            arr5[i] = r.nextInt();
+        }
+        int min = arr5[0];
+        int max = arr5[0];
+        for (int i = 0; i < arr5.length; i++) {
+            if (arr5[i] < min)
+                min = arr5[i];
+            if (arr5[i] > max)
+                max = arr5[i];
+        }
     }
-    // третий пункт ДЗ
-    public static int Calculation (int a, int b, int c, int d) {
-        return a * (b + (c / d));
-    }
-    // четвёртый пункт ДЗ
-    public static boolean IsCorrectSum(int a, int b){
-        if (a+b>=10 && a+b<=20)
-            return true;
-        else return false;
-    }
-    // пятый пункт ДЗ
-    public static void SayIfPositive(int a){
-        if (a>=0)
-            System.out.println("Число положительное");
-        else
-            System.out.println("Число отрицательное");
-    }
-    // шестой пункт ДЗ
-    public static boolean IsNegative (int a){
-        if (a<0)
-            return true;
-        else
-            return false;
-    }
-    // седьмой пункт ДЗ
-    public static void HelloUser(String name){
-        System.out.println("Привет, "+name+"!");
-    }
-    // восьмой пункт ДЗ
-    public static void LeapYear(int year){
-        if ((year%4==0 && year%100!=0) || year%400==0)
-            System.out.println("Год високосный");
-        else
-            System.out.println("Год не високосный");
-    }
+
 }
