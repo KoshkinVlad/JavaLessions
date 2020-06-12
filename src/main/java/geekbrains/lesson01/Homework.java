@@ -2,16 +2,21 @@ package geekbrains.lesson01;
 
 public class Homework {
     public static void main(String[] args) {
-        Employeer[] empArray=new Employeer[5];
-        empArray[0]=new Employeer("Ivan Ivanov","Teamlead", "ivanov@outlook.com","+7-896-569-45-89",75000,55);
-        empArray[1]=new Employeer("Vladislav Koshkin", "Performance Engineer", "kisa94@mail.ru", "+7-426-987-65-45", 40000, 25);
-        empArray[2]=new Employeer("Alexey Pupkin", "Manager", "pupLexxxa@yandex.ru", "+7-562-497-65-45", 60000, 45);
-        empArray[3]=new Employeer("Anna Novak", "Head Chief", "annetqa@vk.com", "+7-487-569-72-56", 250000,19);
-        empArray[4]=new Employeer("Gleb Galenkin", "Bookkeeper", "hlest@yahoo.com", "+7-598-521-56-89", 3000, 18);
-        for (Employeer e : empArray) {
-            if (e.getAge()>40) {
-                e.PrintInfo();
-            }
-        }
+        Cat vasya=new Cat("Васька");
+        vasya.Swim(5);
+        vasya.Jump(1);
+        vasya.Run(500);
+
+        Dog bobik=new Dog("Бобик");
+        bobik.Swim(5);
+        bobik.Swim(15);
+        bobik.Jump(1);
+        bobik.Jump(3);
+        bobik.Run(450);
+        bobik.Run(600);
+
+        Cat murka=new Cat("Мурка");
+        murka.Jump(3);
+        murka.Run(150);
     }
 }
