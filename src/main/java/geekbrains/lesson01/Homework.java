@@ -1,22 +1,33 @@
 package geekbrains.lesson01;
 
+import java.util.Random;
+
 public class Homework {
     public static void main(String[] args) {
-        Cat vasya=new Cat("Васька");
-        vasya.Swim(5);
-        vasya.Jump(1);
-        vasya.Run(500);
+//        Cat Vasya = new Cat("Васька", 50);
+//        Plate plate = new Plate(30);
+//        plate.info();
+//        Vasya.eat(plate);
+//        plate.info();
+//        Cat Tom = new Cat("Том", 60);
+//        Plate stewpot = new Plate(100);
+//        stewpot.info();
+//        Tom.eat(stewpot);
+//        stewpot.info();
 
-        Dog bobik=new Dog("Бобик");
-        bobik.Swim(5);
-        bobik.Swim(15);
-        bobik.Jump(1);
-        bobik.Jump(3);
-        bobik.Run(450);
-        bobik.Run(600);
+        // Пятый пункт
+        Plate veryBigPot = new Plate(500);
+        Cat[] cats = new Cat[10];
+        Random rand = new Random();
+        String[] catNames = new String[]{"Пушистик", "Мотька", "Мурка", "Джек", "Петька", "Алиска", "Андрейка", "Ксюша", "Киска", "Обжора"};
+        for (int i = 0; i < cats.length; i++) {
+            int appetite =rand.nextInt(150);
+            cats[i]=new Cat(catNames[i],appetite);
+            veryBigPot.info();
+            cats[i].eat(veryBigPot);
+            veryBigPot.info();
+            veryBigPot.AddFood(rand.nextInt(10));
+        }
 
-        Cat murka=new Cat("Мурка");
-        murka.Jump(3);
-        murka.Run(150);
     }
 }
